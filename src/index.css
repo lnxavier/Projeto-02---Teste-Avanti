@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'Hubot Sans';
+  src: url('/fonts/hubot-sans.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  /* color variables */
+  --primary-color: #000000;
+  --secundary-color: #ffffff;
+  --highlight-color: #005CFF;
+  --highlight-hover-color: #0042b4;
+  --error-color: #FF0000;
+  --background-color: #1F1F1F;
+  /* font variables */
+  --primary-font: 'Nunito Sans', sans-serif;
+  --secundary-font: 'Hubot Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100svh;
+  overflow: hidden;
+  line-height: 1;
+  font-family: var(--primary-font);
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  position: relative;
+  margin: 0;
+  padding: 1.75rem 0;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* App form */
+
+.app__main-container {
+  align-self: center;
+  justify-self: center;
+  width: 80.3%;
+  height: 66.3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.06rem;
+  background-color: var(--primary-color);
+  color: var(--secundary-color);
+  padding: 2.44rem 0 2.31rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.app__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.69rem;
+  width: 43.51%;
+}
+
+.app__form-title-container {
+  display: flex;
+  align-items: center;
+  gap: 0.69rem;
+}
+
+.app__form-title {
+  font-size: clamp(1.75rem, 4.2vw, 5rem);
+  font-weight: 600;
+}
+
+.app__form-title--highlight {
+  font-family: var(--secundary-font);
+  font-weight: 900;
+}
+
+.app__form-github-logo {
+  width: 3.63rem;
+  height: auto;
+}
+
+.app__form-github {
+  width: 11.25rem;
+  height: auto;
+}
+
+.app__form-search {
+  position: relative;
+  width: 100%;
+}
+
+.app__form-search button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--highlight-color);
+  border: 1px solid var(--secundary-color);
+  height: 100%;
+  width: 3.88rem;
+  border-radius: 0.63rem;
+}
+
+button:hover {
+  background-color: var(--highlight-hover-color);
+}
+
+.app__form-search input {
+  padding: 1.13rem 0 1.06rem 1rem;
+  width: 100%;
+  border: 1px solid var(--secundary-color);
+  outline: none;
+  border-radius: 0.63rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  font-size: clamp(1.25rem, 1.4vw, 3rem);
+  font-family: var(--primary-font);
+}
+
+.app__form-search input::placeholder {
+  font-weight: 500;
+  color: var(--primary-color);
+  font-size: clamp(1.25rem, 1.4vw, 3rem);
+  font-family: var(--primary-font);
+}
+
+/* result search */
+
+.app__content {
+  width: 70%;
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  padding: 1.25rem 4.44rem 1.25rem 2.06rem;
+  border-radius: 1.56rem;
+}
+
+.app__content-image {
+  border: 0.13rem solid var(--highlight-color);
+  border-radius: 50%;
+  width: 27.36%;
+  height: auto;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app__content-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app__content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app__user-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--highlight-color);
+}
+
+.app__user-name {
+  color: var(--highlight-color);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 1.4vw, 3rem);
+}
+
+.app__user-bio {
+  font-size: clamp(0.94rem, 1.1vw, 2rem);
+  font-weight: 300;
+}
+
+.app__not-found {
+  background-color: var(--secundary-color);
+  color: var(--error-color);
+  width: 61.42%;
+  padding: 1.06rem 1rem;
+  text-align: center;
+  border-radius: 0.63rem;
+}
+
+.app__square-effect {
+  position: absolute;
+  top: -6.81rem;
+  left: -4.56rem;
+}
+
+/* effects */
+
+.effect {
+  position: absolute;
+  top: 12.38rem;
+  left: -25.94rem;
+  width: 42.13rem;
+  height: 83.21vh;
+  z-index: 2;
+}
+
+.effect img {
+  width: 100%;
+  height: auto;
+}
+
+.effect-2 {
+  position: absolute;
+  top: -16.75rem;
+  right: -15.88rem;
+  width: 55.5rem;
+  height: 109.63vh;
+}
+
+.effect-2 img {
+  width: 100%;
+  height: auto;
+}
