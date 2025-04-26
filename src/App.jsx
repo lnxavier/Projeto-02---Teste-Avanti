@@ -85,7 +85,7 @@ function App() {
 
         {!userData && hasSearched && !isLoading && (
           <div className='app__not-found'>
-            <p>Nenhum perfil foi encontrado com ese nome de usuário.<br />Tente novamente.</p>
+            <p>Nenhum perfil foi encontrado com esse nome de usuário.<br />Tente novamente.</p>
           </div>
         )}
 
